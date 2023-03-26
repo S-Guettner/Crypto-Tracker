@@ -5,7 +5,7 @@ import CryptoCard from '../components/CryptoCard'
 const Home = () => {
     
     const [cryptoData,setCryptoData] = useState([])
-    const [topListLimit,setTopListLimit] =useState(20)
+    const [topListLimit,setTopListLimit] = useState<number>(20)
     
 
     useEffect(() => {
