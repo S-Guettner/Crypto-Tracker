@@ -16,13 +16,14 @@ const Home = () => {
             setCryptoData(data)
         })
         
-    },[])
+    },[topListLimit])
 
         console.log(cryptoData?.slice(0,topListLimit))
     return ( 
 
         <main className='px-24'>
             <h1>Home</h1>
+            <h3>Top {topListLimit} Crypto</h3>
             {cryptoData?.slice(0,topListLimit).map((coin:{name:string,current_price:number,market_cap:number,market_cap_change_24h:number,image:string}) => {
                 return(
                     <CryptoCard 
@@ -35,6 +36,7 @@ const Home = () => {
                     />
                 )
             })}
+            <button onClick={() => setTopListLimit(topListLimit + 20)}>Show More</button>
         </main>
     );
 }
