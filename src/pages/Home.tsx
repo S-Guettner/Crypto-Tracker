@@ -17,7 +17,7 @@ const Home = () => {
         })
         
     },[topListLimit])
-
+        
         console.log(cryptoData?.slice(0,topListLimit))
     return ( 
 
