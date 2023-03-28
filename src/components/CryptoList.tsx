@@ -6,23 +6,29 @@ const CryptoList = () => {
     
         const [cryptoData,setCryptoData] = useState([])
         const [topListLimit,setTopListLimit] = useState<number>(20)
+
+        const [listOrder,setListOrder] = useState("market_cap_desc")
     
 
     useEffect(() => {
-        fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false`)
+        fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=${listOrder}&per_page=100&page=1&sparkline=false`)
         .then(res => res.json())
         .then(data => {
             console.log(data)
             setCryptoData(data)
         })
         
-    },[topListLimit])
+    },[topListLimit,listOrder])
         
         console.log(cryptoData?.slice(0,topListLimit))
     
     return ( 
         <main className='px-24'>
             <h3>Top {topListLimit} Crypto</h3>
+
+            <div>
+                
+            </div>
             
             {cryptoData?.slice(0,topListLimit).map((coin:{name:string,current_price:number,market_cap:number,market_cap_change_24h:number,image:string}) => {
                 return(
