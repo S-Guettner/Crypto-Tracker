@@ -47,9 +47,7 @@ const CryptoList = () => {
             <section className="flex ">
                 {/* sort by filter */}
                 <div className="ml-auto mb-2">
-                    <button className="rounded-lg border-2" onClick={() => setChangeSort(!changeSort)}>
-                        Sort By
-                    </button>
+                    <button className="rounded-lg border-2" onClick={() => setChangeSort(!changeSort)}>Sort By</button>
                     <div>
                         {changeSort && SORTLIST.map((item) => {
                                 return (
