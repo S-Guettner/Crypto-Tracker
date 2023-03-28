@@ -16,7 +16,7 @@ const CryptoCard = (props:{name:string,price:number,cap:number,capChange24h:numb
             </div>
             <div>
                 <p>market cap. change 24h</p>
-                <p>{props.capChange24h.toFixed(0)}</p>
+                <p>{props.capChange24h}</p>
             </div>
         </section>
      )

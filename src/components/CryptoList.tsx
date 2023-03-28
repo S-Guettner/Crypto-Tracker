@@ -41,7 +41,7 @@ const CryptoList = () => {
 
     console.log(changeSort)
     return (
-        <main className="px-24">
+        <main className="px-24 mb-4">
             <h3>Top {topListLimit} Crypto</h3>
 
             <section className="flex ">
@@ -75,7 +75,7 @@ const CryptoList = () => {
             </section>
 
             <section>
-                {cryptoData?.slice(0, topListLimit).map((coin: { name: string; current_price: number; market_cap: number; market_cap_change_24h: number; image: string }) => {
+                {cryptoData?.slice(0, topListLimit).map((coin: { name: string, current_price: number, market_cap: number, market_cap_change_24h: number, image: string }) => {
                         return (
                             <CryptoCard
                                 key={uuidv4()}
