@@ -2,16 +2,16 @@ import { v4 as uuidv4 } from 'uuid'
 import {useEffect,useState} from 'react'
 import CryptoList from '../components/CryptoList'
 
+
 const Home = () => {
     
+
 
     return ( 
 
         <main className='px-24'>
             <h1>Home</h1>
-            <CryptoList 
-            
-            />
+            <CryptoList  />
         </main>
     );
 }
