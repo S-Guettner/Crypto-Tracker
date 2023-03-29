@@ -28,6 +28,7 @@ const CryptoList = () => {
         {name: "AUD",value: "AUD",},
     ]
 
+    // coingecko API has an issue !!!!!!!!!
     useEffect(() => {
         fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&order=${listOrder}&per_page=100&page=1&sparkline=false`)
             .then((res) => res.json())
